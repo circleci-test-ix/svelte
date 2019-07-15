@@ -26,7 +26,7 @@ jobs:
           name: run npm install script 8
           command: npm ci || npm install
       - run:
-	  name: success script 8
+          name: success script 8
 	  command: npm run codecov
 	  when: on_success
   install10:
@@ -46,7 +46,7 @@ jobs:
           name: run npm install script 10
           command: npm ci || npm install
       - run:
-	  name: success script 10
+          name: success script 10
 	  command: npm run codecov
 	  when: on_success
   install12:
@@ -66,6 +66,6 @@ jobs:
           name: run npm install script 12
           command: npm ci || npm install
       - run:
-	  name: success script 12
+          name: success script 12
 	  command: npm run codecov
 	  when: on_success
