@@ -61,8 +61,5 @@ jobs:
     steps:
       - checkout
       - run:
-          name: success npm install node
-          command: npm install node:8
-      - run:
           name: success script
           command: npm run codecov
