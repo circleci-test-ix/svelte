@@ -61,5 +61,5 @@ jobs:
     steps:
       - checkout
       - run:
-        name: success script
-        command: npm run codecov
+          name: success script
+          command: npm run codecov
