@@ -56,6 +56,8 @@ jobs:
           name: run npm install script 12
           command: npm ci || npm install
   success:
+    docker:
+      - image: node:8
     steps:
       - checkout
       - run:
