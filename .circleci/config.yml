@@ -55,9 +55,9 @@ jobs:
       - run:
           name: run npm install script 12
           command: npm ci || npm install
-	success:
-	  steps:
-		  - checkout
-			- run:
-			  name: success script
-				command: npm run codecov
+  success:
+    steps:
+      - checkout
+      - run:
+        name: success script
+	command: npm run codecov
