@@ -27,8 +27,8 @@ jobs:
           command: npm ci || npm install
       - run:
           name: success script 8
-	  command: npm run codecov
-	  when: on_success
+          command: npm run codecov
+          when: on_success
   install10:
     requires:
       -xvfb
@@ -47,8 +47,8 @@ jobs:
           command: npm ci || npm install
       - run:
           name: success script 10
-	  command: npm run codecov
-	  when: on_success
+          command: npm run codecov
+          when: on_success
   install12:
     requires:
       -xvfb
@@ -67,5 +67,5 @@ jobs:
           command: npm ci || npm install
       - run:
           name: success script 12
-	  command: npm run codecov
-	  when: on_success
+          command: npm run codecov
+          when: on_success
