@@ -1,12 +1,12 @@
 version: 2.1
 
 workflows:
-	version: 2
-	build:
-		jobs:
-			- install8:
-			- install10:
-			- install12:
+  version: 2
+  build:
+    jobs:
+      - install8:
+      - install10:
+      - install12:
 		
 
 jobs:
