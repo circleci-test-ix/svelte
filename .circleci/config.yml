@@ -5,13 +5,13 @@ workflows:
   build: 
     jobs:
       - install8:
-			- install10:
-			- install12:
+      - install10:
+      - install12:
 
 jobs:
   install8:
-		requires:
-			-xvfb
+    requires:
+      -xvfb
     docker:
       - image: node:8
     steps:
@@ -25,13 +25,13 @@ jobs:
       - run:
           name: run npm install script 8
           command: npm ci || npm install
-			- run:
-					name: success script 8
-					command: npm run codecov
-					when: on_success
-	install10:
-		requires:
-			-xvfb
+      - run:
+	  name: success script 8
+	  command: npm run codecov
+	  when: on_success
+  install10:
+    requires:
+      -xvfb
     docker:
       - image: node:10
     steps:
@@ -45,13 +45,13 @@ jobs:
       - run:
           name: run npm install script 10
           command: npm ci || npm install
-			- run:
-					name: success script 10
-					command: npm run codecov
-					when: on_success
-	install12:
-		requires:
-			-xvfb
+      - run:
+	  name: success script 10
+	  command: npm run codecov
+	  when: on_success
+  install12:
+    requires:
+      -xvfb
     docker:
       - image: node:12
     steps:
@@ -65,7 +65,7 @@ jobs:
       - run:
           name: run npm install script 12
           command: npm ci || npm install
-			- run:
-					name: success script 12
-					command: npm run codecov
-					when: on_success
+      - run:
+	  name: success script 12
+	  command: npm run codecov
+	  when: on_success
