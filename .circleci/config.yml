@@ -7,11 +7,6 @@ workflows:
       - install8
       - install10
       - install12
-      - success:
-          requires:
-            - install8
-            - install10
-            - install12
 jobs:
   install8:
     docker:
@@ -55,12 +50,3 @@ jobs:
       - run:
           name: run npm install script 12
           command: npm ci || npm install
-  success:
-    docker:
-      - image: node:8
-    steps:
-      - checkout
-      - run: npm install
-      - run:
-          name: success script
-          command: npm run codecov
