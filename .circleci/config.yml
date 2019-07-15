@@ -60,7 +60,7 @@ jobs:
       - image: node:8
     steps:
       - checkout
-      - run: npx mocha
+      - run: npm install mocha
       - run:
           name: success script
           command: npm run codecov
