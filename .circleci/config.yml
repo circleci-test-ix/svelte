@@ -8,10 +8,10 @@ workflows:
       - install10
       - install12
       - success:
-        requires:
-          - install8
-          - install10
-          - install12
+          requires:
+            - install8
+            - install10
+            - install12
 jobs:
   install8:
     docker:
