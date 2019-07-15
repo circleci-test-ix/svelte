@@ -1,17 +1,7 @@
 version: 2.1
 
-workflows:
-  version: 2
-  build: 
-    jobs:
-      - install8:
-      - install10:
-      - install12:
-
 jobs:
   install8:
-    requires:
-      -xvfb
     docker:
       - image: node:8
     steps:
@@ -30,8 +20,6 @@ jobs:
           command: npm run codecov
           when: on_success
   install10:
-    requires:
-      -xvfb
     docker:
       - image: node:10
     steps:
@@ -50,8 +38,6 @@ jobs:
           command: npm run codecov
           when: on_success
   install12:
-    requires:
-      -xvfb
     docker:
       - image: node:12
     steps:
