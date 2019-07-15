@@ -7,46 +7,29 @@ workflows:
       - install8
       - install10
       - install12
+build_steps: &build_steps
+    - run:
+        name: Build
+        command: |
+            export DISPLAY=':99.0'
+            Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+            npm ci || npm install
 jobs:
   install8:
     docker:
       - image: node:8
     steps:
       - checkout
-      - run:
-          name: run export 8
-          command: export DISPLAY=':99.0'
-      - run:
-          name: run Xvfb 8
-          command: Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-      - run:
-          name: run npm install script 8
-          command: npm ci || npm install
+      - <<: *build_steps
   install10:
     docker:
       - image: node:10
     steps:
       - checkout
-      - run:
-          name: run export 10
-          command: export DISPLAY=':99.0'
-      - run:
-          name: run Xvfb 10
-          command: Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-      - run:
-          name: run npm install script 10
-          command: npm ci || npm install
+      - <<: *build_steps
   install12:
     docker:
       - image: node:12
     steps:
       - checkout
-      - run:
-          name: run export 12
-          command: export DISPLAY=':99.0'
-      - run:
-          name: run Xvfb 12
-          command: Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-      - run:
-          name: run npm install script 12
-          command: npm ci || npm install
+      - <<: *build_steps
