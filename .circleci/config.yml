@@ -4,9 +4,9 @@ workflows:
   version: 2
   build:
     jobs:
-      - install8:
-      - install10:
-      - install12:
+      - install8
+      - install10
+      - install12
 jobs:
   install8:
     docker:
