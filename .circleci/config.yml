@@ -17,19 +17,19 @@ commands:
 jobs:
   node_8:
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:8-browsers
     steps:
       - default-build-steps
   
   node_10:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:10-browsers
     steps:
       - default-build-steps
   
   node_12:
     docker:
-      - image: circleci/node:12
+      - image: circleci/node:12-browsers
     steps:
       - default-build-steps
 
